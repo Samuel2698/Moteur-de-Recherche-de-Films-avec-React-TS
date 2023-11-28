@@ -1,0 +1,67 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.movies h3,
+.movies p {
+  margin: 6px 0;
+  text-align: center;
+}
+
+.movie h3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.movies img {
+  min-height: 400px;
+  width: 100%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.input-text-error {
+  border: 1px solid red;
+}
+
+.input-text {
+  border: 1px solid transparent;
+}
+
+.input-sort {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}
+
+.loading {
+  font-size: 50px;
+  text-align: center;
+}
+
+@media (width<=480px) {
+  .input-sort {
+    margin: 20px 0 0 0;
+  }
+}

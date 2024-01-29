@@ -11,7 +11,6 @@ export function useMovies({
 }) {
   const [movies, setMovies] = useState<getMoviesProps[]>([])
   const [loading, setLoading] = useState(false)
-  // eslint-disable-next-line
   const [error, setError] = useState<string | null>(null)
   const previousSearch = useRef(search)
 
@@ -41,5 +40,5 @@ export function useMovies({
       : movies
   }, [sort, movies])
 
-  return { movies: sortedMovies, getMovies, loading }
+  return { movies: sortedMovies, getMovies, loading, error }
 }
